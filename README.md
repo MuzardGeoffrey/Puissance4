@@ -8,8 +8,7 @@ Fontionnaliter mise en place :
 * Le client peut faire une demande de connexion a l'API. Si le pseudo et le mot de passe existe pour un player en bdd alors l'API renvoie le player qui correspond.
 
 Algorithme du puissance 4 :
-`` 
-//Pour choisir dans quel collone on met le jeton
+`` //Pour choisir dans quel collone on met le jeton
 private void choiseColumn()
     {
         //si on appuis sur la fleche gauche
