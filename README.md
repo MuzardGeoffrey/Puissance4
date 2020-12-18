@@ -10,7 +10,7 @@ Fontionnaliter mise en place :
 Algorithme du puissance 4 :
 
 ``//Pour choisir dans quel collone on met le jeton ``
-``private void choiseColumn()``
+``private void choiseColumn()
     {
         //si on appuis sur la fleche gauche
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -19,10 +19,10 @@ Algorithme du puissance 4 :
             if (BlockActif != 6)
             {
                 // on color le block sur le quel on etait en rouge
-``               choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.red; ``
+                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.red; ``
                 BlockActif++;
                 //on color le block sur le quel on vient de selectionner en vert
-``                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.green; ``
+                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.green; ``
             }
         }
         //si on appuis sur la fleche droite
@@ -32,10 +32,10 @@ Algorithme du puissance 4 :
             if (BlockActif != 0)
             {
                 // on color le block sur le quel on etait en rouge
-``                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.red; ``
+                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.red; ``
                 BlockActif--;
                 //on color le block sur le quel on vient de selectionner en vert
-``               choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.green; ``
+                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.green; ``
             }
         }
     }
