@@ -73,12 +73,11 @@ public class SelectButton : MonoBehaviour
 
                 break;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) && GameGestion.gameSpace[BlockActif,5] == 0)
         {
             Cooldown = 1;
             choiseButtons[BlockActif].SummunJeton(ColorJeton);
             GameGestion.Playjeton(BlockActif);
         }
-        
     }
 }

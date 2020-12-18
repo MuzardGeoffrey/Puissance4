@@ -7,14 +7,32 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Puissance4API.Data;
 using Puissance4API.Models;
+using Puissance4API.Route;
 
 namespace Puissance4API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route(PlayerRoute.RoutePlayer)]
     [ApiController]
     public class PlayersController : ControllerBase
     {
         private readonly PlayerContext _context;
+
+        [HttpPost]
+        [Route(PlayerRoute.Login)]
+        public async Task<IActionResult> LoginPlayer(Player player)
+        {
+            Player playerReturn = new Player();
+
+
+            playerReturn = await _context.Players.Where(playerr => player.Pseudo == player.Pseudo && playerr.Password == player.Password).FirstOrDefaultAsync();
+
+            if (playerReturn != null)
+            {
+                return this.Ok(playerReturn);
+            }
+
+            return this.Ok(null);
+        }
 
         public PlayersController(PlayerContext context)
         {
