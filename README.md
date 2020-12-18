@@ -8,8 +8,9 @@ Fontionnaliter mise en place :
 * Le client peut faire une demande de connexion a l'API. Si le pseudo et le mot de passe existe pour un player en bdd alors l'API renvoie le player qui correspond.
 
 Algorithme du puissance 4 :
-`` //Pour choisir dans quel collone on met le jeton
-private void choiseColumn()
+
+``//Pour choisir dans quel collone on met le jeton ``
+``private void choiseColumn()``
     {
         //si on appuis sur la fleche gauche
         if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -18,10 +19,10 @@ private void choiseColumn()
             if (BlockActif != 6)
             {
                 // on color le block sur le quel on etait en rouge
-                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+``               choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.red; ``
                 BlockActif++;
                 //on color le block sur le quel on vient de selectionner en vert
-                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.green;
+``                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.green; ``
             }
         }
         //si on appuis sur la fleche droite
@@ -31,10 +32,10 @@ private void choiseColumn()
             if (BlockActif != 0)
             {
                 // on color le block sur le quel on etait en rouge
-                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+``                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.red; ``
                 BlockActif--;
                 //on color le block sur le quel on vient de selectionner en vert
-                choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.green;
+``               choiseButtons[BlockActif].gameObject.GetComponent<MeshRenderer>().material.color = Color.green; ``
             }
         }
     }
