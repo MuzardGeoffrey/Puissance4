@@ -9,8 +9,8 @@ Fontionnaliter mise en place :
 
 Algorithme du puissance 4 :
 
-``//Pour choisir dans quel collone on met le jeton ``
-``private void choiseColumn()
+//Pour choisir dans quel collone on met le jeton 
+private void choiseColumn()
     {
         //si on appuis sur la fleche gauche
         if (Input.GetKeyDown(KeyCode.LeftArrow))
